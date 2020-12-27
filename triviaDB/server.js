@@ -15,17 +15,7 @@ app.use(express.json());
 
 app.use(cors(corsOptions));
 
-const userOne = new user({
-  email: "superboat@gmail.com",
-  username: "superBoats",
-  password: "water",
-});
 
-userOne.save(function (error) {
-  if (error) {
-    console.log(error);
-  }
-});
 
 app.get("/users", (req, res) => {
   console.log("finding");
